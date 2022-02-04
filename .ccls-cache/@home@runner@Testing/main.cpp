@@ -1,44 +1,31 @@
-//How to know wich integer is the greater
 
 #include <iostream>
 using namespace std;
 
-int main()
-{
-	int age;
-  double income;
-  string city_employment; 
+int main() {
 
-  cout<<"This is the public transportation system.\nPlease answers the question to indicated what you have to pay.\n\n";
-  cout<<"Let's start!\n\n";
-  cout<<"Please enter your Age:\n";cin>>age;
-  cout<<"Please enter your Income:\n";cin>>income;
-  cout<< "Are you a City Employee? Please answer Yes or No: \n";
-  cin>>city_employment;
+int n, number_day;
+cout<<"Introduce a number and you will know which day of the week it is\n";
+cin>>number_day;
 
-  if(city_employment=="yes"){
-    cout<< "Please pay only $50\n";
+if(number_day>0 && number_day<=7)
+ {   
+
+  switch(number_day){
+  case 1: cout<<"Sunday\n"; break;
+  case 2: cout<<"Monday\n";break;
+  case 3: cout<<"Tuesday\n";break;
+  case 4: cout<<"Wednesday\n";break;
+  case 5: cout<<"Thursday\n";break;
+  case 6: cout<<"Friday\n";break;
+  case 7: cout<<"Saturday\n";break;
   }
-    else if( age >=0  && age <=5)
-      { cout<< "Kids under 5 years old don't pay\n";}
-    else if( age >= 6 && age <=17) 
-      { cout<< "Please pay $80 dollars\n"; }
-    else if( age >= 18 && income <=15000)
-      { cout<< "Please pay $30 dollars\n";}       
-    else if(age >= 65 && income <=30000) 
-      {  cout<< "Please pay $70 dollars\n";}
-        //    }   ) 
-        else { 
-        cout<< "You are part of General Population, Please pay only $100\n\n"; }
+
+ }
+
+else 
+cout<<"The week only have 7 days\n";
 
 return 0;
-    
-    
-    }
 
-
-
-
-
-
-
+}
